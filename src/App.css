@@ -1,0 +1,244 @@
+.App {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+a { color: inherit; } 
+
+
+.screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 30px 50px;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+}
+
+.form {
+  width: 380px;
+  padding: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  background: #fff;
+  margin-top: -100px;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+.forgotpassword-screen__subtext {
+  font-size: 0.7rem;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+  
+.login-screen__forgotpassword {
+  font-size: 0.7rem;
+}
+
+.login-screen__subtext {
+  font-size: 0.7rem;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+  
+.register-screen__subtext {
+  font-size: 0.7rem;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+
+.restaurants{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-class {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1500px;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.restaurant-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-info h1 {
+  padding: 10px 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-ratings-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.main-rating{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  margin: 10px;
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%);
+}
+
+.latest-rating {
+  margin: 60px 30px;
+}
+
+.shadow {
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%);
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.reviews-header button
+{
+  width: 200px;
+}
+
+.restaurant-reviews{
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 80px;
+  padding: 30px 20px;
+}
+
+.review-form form {
+  width: auto;
+}
+
+textarea {
+  padding: 10px 20px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  background-color: #eee;
+}
+
+.add-restaurant {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.add-restaurant button{
+  width: 200px;
+}
+
+.user-form{
+  min-width: 300px;
+}
+
+
+
+/* table-styles */
+
+th, td, table {
+  padding: 15px 30px;
+}
+
+th {
+  font-size: larger;
+  text-align: left;
+} 
+
+td {
+  font-size: medium;
+  font-weight: bold;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.restaurant-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  padding: 20px 40px;
+  min-height: 200px;
+  margin: 15px;
+  background: white;
+  cursor: pointer;
+  /* border: 1px solid black; */
+  box-shadow: 0px 0px 6px 3px rgb(0 0 0 / 34%);
+  -webkit-box-shadow: 0px 0px 6px 3px rgb(0 0 0 / 34%);
+}
+
+.review-card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-card-icon {
+  display: flex;
+  justify-content: end;
+}
+
+.reservation {
+  display: flex;
+}
