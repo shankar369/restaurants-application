@@ -3,6 +3,9 @@ import axios from "axios";
 import { AuthContext } from "../contexts/authContext";
 import { UtilContext } from "../contexts/utilContext";
 
+const apiUrl = "https://restaurants-api-u5ww.onrender.com";
+
+
 const ReviewDeleteForm = ({reviewId, setShowForm, setReviews, error, setError}) => {
     const {user} = useContext(AuthContext)
     const {setLoading} = useContext(UtilContext)
@@ -23,7 +26,7 @@ const ReviewDeleteForm = ({reviewId, setShowForm, setReviews, error, setError}) 
         try {
           setLoading(true)
          const data = await axios.delete(
-            `/api/ratings/${reviewId}`,
+            `${apiUrl}/api/ratings/${reviewId}`,
             config
           );
           updateReviewsList()

@@ -3,6 +3,7 @@ import ReactStars from "react-stars";
 import axios from "axios";
 import { AuthContext } from "../contexts/authContext";
 import { UtilContext } from "../contexts/utilContext";
+const apiUrl = "https://restaurants-api-u5ww.onrender.com";
 
 const ReviewForm = ({restaurant_id, setShowForm, setRatings,updateRatingMath}) => {
     const [rating,setRating] = useState(0);
@@ -25,7 +26,7 @@ const ReviewForm = ({restaurant_id, setShowForm, setRatings,updateRatingMath}) =
           console.log(user.data.username,"-=-=-=-=-=--")
           setLoading(true)
          const addedRating = await axios.post(
-            `/api/ratings/${restaurant_id}`,
+            `${apiUrl}/api/ratings/${restaurant_id}`,
             { rating, comment, user_id: user.data.id, user_name: user.data.username },
             config
           );

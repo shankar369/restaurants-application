@@ -1,5 +1,7 @@
 import axios from "axios";
 
+const apiUrl = "https://restaurants-api-u5ww.onrender.com";
+
 export const getRestaurants = async (setRestaurants,token,setLoading) => {
     const config = {
         headers: {
@@ -10,7 +12,7 @@ export const getRestaurants = async (setRestaurants,token,setLoading) => {
 
       try {
         setLoading(true);
-        const { data } = await axios.get("/api/restaurants", config);
+        const { data } = await axios.get(`${apiUrl}/api/restaurants`, config);
         setRestaurants(data.data);
         setLoading(false)
       } catch (error) {
@@ -31,7 +33,7 @@ export const getRestaurants = async (setRestaurants,token,setLoading) => {
   
         try {
           setLoading(true)
-          const { data } = await axios.get("/api/users", config);
+          const { data } = await axios.get(`${apiUrl}/api/users`, config);
           setUsers(data.data);
           setLoading(false)
         } catch (error) {
@@ -53,8 +55,8 @@ export const getRestaurants = async (setRestaurants,token,setLoading) => {
     
           try {
             setLoading(true)
-            const { data } = await axios.get(`/api/restaurants/${restaurantId}`, config);
-            const { data:ratingsData } = await axios.get(`/api/ratings/${restaurantId}`, config);
+            const { data } = await axios.get(`${apiUrl}/api/restaurants/${restaurantId}`, config);
+            const { data:ratingsData } = await axios.get(`${apiUrl}/api/ratings/${restaurantId}`, config);
             console.log(ratingsData,"----------------rad")
             setRestaurant(data.data);
             setRatings(ratingsData.data?.reverse())
