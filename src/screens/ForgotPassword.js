@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+const apiUrl = "https://restaurants-api-u5ww.onrender.com";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -17,7 +18,7 @@ const ForgotPassword = () => {
 
     try {
       const { data } = await axios.post(
-        "/api/auth/forgotpassword",
+        `${apiUrl}/api/auth/forgotpassword`,
         { email },
         config
       );

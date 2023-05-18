@@ -3,6 +3,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../contexts/authContext";
 
+const apiUrl = "https://restaurants-api-u5ww.onrender.com";
+
 const Login = ({ history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,7 +30,7 @@ const Login = ({ history }) => {
 
     try {
       const { data } = await axios.post(
-        "/api/auth/login",
+        `${apiUrl}/api/auth/login`,
         { email, password },
         config
       );

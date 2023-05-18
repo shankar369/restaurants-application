@@ -3,6 +3,8 @@ import axios from "axios";
 import { AuthContext } from "../contexts/authContext";
 import { UtilContext } from "../contexts/utilContext";
 
+const apiUrl = "https://restaurants-api-u5ww.onrender.com";
+
 const RestaurantEditForm = ({prevData, setShowForm, setRestaurants}) => {
     const restaurantId = prevData?._id
     const [name,setName] = useState(prevData.name);
@@ -28,7 +30,7 @@ const RestaurantEditForm = ({prevData, setShowForm, setRestaurants}) => {
         try {
           setLoading(true)
          const addedRestaurant = await axios.put(
-            `/api/restaurants/${restaurantId}`,
+            `${apiUrl}/api/restaurants/${restaurantId}`,
             { name, address },
             config
           );

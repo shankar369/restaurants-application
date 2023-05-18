@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../contexts/authContext";
+const apiUrl = "https://restaurants-api-u5ww.onrender.com";
 
 const Signup = ({ history }) => {
   const [username, setUsername] = useState("");
@@ -32,7 +33,7 @@ const Signup = ({ history }) => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/signup",
+        `${apiUrl}/api/auth/signup`,
         {
           username,
           email,

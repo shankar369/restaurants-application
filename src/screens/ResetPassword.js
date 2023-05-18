@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+const apiUrl = "https://restaurants-api-u5ww.onrender.com";
 
 const ResetPassword = ({ history, match }) => {
   const [password, setPassword] = useState("");
@@ -29,7 +30,7 @@ const ResetPassword = ({ history, match }) => {
 
     try {
       const { data } = await axios.put(
-        `http://localhost:5000/api/auth/resetpassword/${match.params.resetToken}`,
+        `${apiUrl}/api/auth/resetpassword/${match.params.resetToken}`,
         {
           password,
         },

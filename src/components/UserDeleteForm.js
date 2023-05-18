@@ -3,6 +3,9 @@ import axios from "axios";
 import { AuthContext } from "../contexts/authContext";
 import { UtilContext } from "../contexts/utilContext";
 
+
+const apiUrl = "https://restaurants-api-u5ww.onrender.com";
+
 const UserDeleteForm = ({prevData, setShowForm, setUsers}) => {
     const userId = prevData?._id
     const [username,setUsername] = useState(prevData.username);
@@ -28,7 +31,7 @@ const UserDeleteForm = ({prevData, setShowForm, setUsers}) => {
         try {
          setLoading(true)
          const data = await axios.delete(
-            `/api/users/${userId}`,
+            `${apiUrl}/api/users/${userId}`,
             config
           );
           updateUsersList()
