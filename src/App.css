@@ -92,35 +92,9 @@ a { color: inherit; }
   flex-direction: column;
 }
 
-.restaurant-info {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 20px;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
 
-.restaurant-info h1 {
-  padding: 10px 10px;
-  text-align: center;
-  text-transform: uppercase;
-}
 
-.main-ratings-wrapper {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
 
-.main-rating{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 40px;
-  margin: 10px;
-  box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%);
-}
 
 .latest-rating {
   margin: 60px 30px;
@@ -130,23 +104,6 @@ a { color: inherit; }
   box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%);
 }
 
-.reviews-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 30px;
-}
-
-.reviews-header button
-{
-  width: 200px;
-}
-
-.restaurant-reviews{
-  width: 100%;
-  margin-top: 70px;
-  margin-bottom: 80px;
-  padding: 30px 20px;
-}
 
 .review-form form {
   width: auto;
@@ -215,43 +172,49 @@ td {
   padding-bottom: 20px;
 }
 
-.review-card {
-  display: flex;
-  flex-direction: column;
-  width: 800px;
-  padding: 20px 40px;
-  min-height: 200px;
-  margin: 15px;
-  background: white;
-  cursor: pointer;
-  /* border: 1px solid black; */
-  box-shadow: 0px 0px 6px 3px rgb(0 0 0 / 34%);
-  -webkit-box-shadow: 0px 0px 6px 3px rgb(0 0 0 / 34%);
-}
-
-.review-card-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.review-card-icon {
-  display: flex;
-  justify-content: end;
-}
 
 .reservation {
   display: flex;
 }
 
-.restaurant-img-main {
-  width: 90%;
-  max-height: 400px;
-  position: relative;
-  overflow: hidden;
+
+.theme-icon {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
 }
 
-.restaurant-img-main img {
-  width: 100%;
-  object-fit: cover;
-  background-size: cover;
+.dark-mode {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.dark-mode img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+@media only screen 
+   and (min-width : 768px) {
+   .screen {
+    padding: 20px;
+   }
+}
+
+@media only screen 
+   and (min-width : 320px) {
+    .screen {
+      padding: 10px;
+     }
+
+     .review-card {
+      /* width: 600px; */
+      padding: 10px 10px;
+      margin: 10px auto;      
+    }
+}
+
+@media only screen 
+   and (min-width : 200px) {
+    .screen {
+      padding: 2px;
+     }
 }

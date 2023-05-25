@@ -5,6 +5,7 @@ import ReviewCard from "./ReviewCard";
 import ReviewDeleteForm from "./ReviewDeleteForm";
 import ReviewForm from "./ReviewForm";
 import { AuthContext } from "../contexts/authContext";
+import "./RestaurantContent.css"
 
 const RestaurantContent = ({ isAdmin, restaurant, ratings, setRatings }) => {
   const [showForm, setShowForm] = useState(false);
@@ -37,55 +38,59 @@ const RestaurantContent = ({ isAdmin, restaurant, ratings, setRatings }) => {
   return (
     <div className="flex-class">
       <div className="restaurant-info">
-        <div className="restaurant-img-main">
-          <img src={restaurant.image} alt="restaurant image" />
-        </div>
-        <div className="restaurant-header">
-          <h1>{restaurant.name}</h1>
-          <h4>{restaurant.address}</h4>
-        </div>
-        <div className="main-ratings">
+        <div className="restaurant-image-wrapper">
+          <div className="restaurant-img-main">
+            <img src={restaurant.image} alt="restaurant image" />
+          </div>
+          <div className="restaurant-header">
+            <h1>{restaurant.name}</h1>
+            <h5>{restaurant.address}</h5>
+            <div className="main-ratings">
           {!newOne && (
             <div className="main-ratings-wrapper">
               <div className="main-rating">
                 <ReactStars
                   edit={false}
                   count={5}
-                  size={50}
+                  size={30}
                   value={restaurant.top_rating}
                   color2={"black"}
                 />
-                <h3>TOP RATING {restaurant.top_rating}</h3>
+                <h3>TOP RATING <span> {restaurant.top_rating} </span></h3>
               </div>
               <div className="main-rating">
                 <ReactStars
                   edit={false}
                   count={5}
-                  size={50}
+                  size={30}
                   value={restaurant.avg_rating}
                   color2={"black"}
                 />
-                <h3>AVG RATING {restaurant.avg_rating.toFixed(1)}</h3>
+                <h3>AVG RATING <span> {restaurant.avg_rating.toFixed(1)} </span></h3>
               </div>
 
               <div className="main-rating">
                 <ReactStars
                   edit={false}
                   count={5}
-                  size={50}
+                  size={30}
                   value={restaurant.lowest_rating}
                   color2={"black"}
                 />
-                <h3>LOWEST RATING {restaurant.lowest_rating}</h3>
+                <h3>LOWEST RATING <span>{restaurant.lowest_rating} </span> </h3>
               </div>
             </div>
           )}
+          </div>
+          </div>
         </div>
+        
+        
       </div>
       <div className="restaurant-reviews shadow">
         <div className="reviews-header">
-          <h1>Reviews</h1>
-          {!user && <h4>Please login to add your review</h4>}
+          <h2>Reviews</h2>
+          {!user && <h5>Please login to add your review</h5>}
           {user && (
             <button
               className="btn btn-primary"

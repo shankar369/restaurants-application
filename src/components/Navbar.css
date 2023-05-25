@@ -10,9 +10,45 @@
 .navbar button {
     width: 100px;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar img {
     height: 50px;
 }
 
+
+@media only screen 
+   and (min-width : 768px) {
+    .navbar {
+        padding: 20px 10px;
+    }
+
+    .navbar img {
+        height: 30px;
+    }
+
+    .navbar button {
+        width: 70px;
+        height: 30px;
+    }
+}
+
+@media only screen 
+   and (min-width : 320px) {
+    .navbar {
+        padding: 10px 10px;
+    }
+
+    .navbar img {
+        height: 30px;
+    }
+
+    .navbar button {
+        width: 60px;
+        height: 30px;
+        font-size: 13px;
+    }
+}

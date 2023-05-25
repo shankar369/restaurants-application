@@ -1,0 +1,140 @@
+.main-ratings {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-ratings-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.main-rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  margin: 10px;
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%);
+}
+
+.main-rating h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+.main-rating h3 span {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.reviews-header {
+  display: flex;
+  width: 100%;
+
+  max-width: 800px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.reviews-header button {
+  width: 200px;
+}
+
+.restaurant-reviews {
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 80px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px 40px;
+  /* min-height: 200px; */
+  margin: 20px auto;
+  background: white;
+  cursor: pointer;
+  /* border: 1px solid black; */
+  box-shadow: 0px 0px 6px 3px rgb(0 0 0 / 34%);
+  -webkit-box-shadow: 0px 0px 6px 3px rgb(0 0 0 / 34%);
+}
+
+.review-card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-card-icon {
+  display: flex;
+  justify-content: end;
+}
+
+.restaurant-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 10px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .restaurant-info h1 {
+    padding: 10px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+
+  .restaurant-info h5 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+.restaurant-image-wrapper{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.restaurant-img-main {
+  width: 500px;
+  max-height: 400px;
+  max-height: 400px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restaurant-img-main img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 320px) {
+  .review-card {
+    /* width: 600px; */
+    padding: 10px 10px;
+    margin: 10px auto;
+  }
+}
+
+@media only screen and (min-width: 200px) {
+}

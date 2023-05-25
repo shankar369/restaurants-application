@@ -13,7 +13,7 @@ const ReviewCard = ({review,isAdmin,setReviewId,setShowForm}) => {
                 <div>{new Date(review.time).toDateString()}</div>
             </div>
             
-            <div className="card-rating">
+            <div className="review-rating">
                 <ReactStars
                     edit={false}
                     count={5}
